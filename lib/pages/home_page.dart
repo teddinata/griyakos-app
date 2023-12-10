@@ -265,21 +265,45 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            BottomNavbarItem(
-              imageUrl: 'assets/images/icon_home.png',
-              isActive: true,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/home', (route) => false);
+              },
+              child: BottomNavbarItem(
+                imageUrl: 'assets/images/icon_home.png',
+                isActive: true,
+              ),
             ),
-            BottomNavbarItem(
-              imageUrl: 'assets/images/icon_mail.png',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/all-spaces', (route) => false);
+              },
+              child: BottomNavbarItem(
+                imageUrl: 'assets/images/icon_mail.png',
+                isActive: false,
+              ),
             ),
-            BottomNavbarItem(
-              imageUrl: 'assets/images/icon_card.png',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/news', (route) => false);
+              },
+              child: BottomNavbarItem(
+                imageUrl: 'assets/images/icon_card.png',
+                isActive: false,
+              ),
             ),
-            BottomNavbarItem(
-              imageUrl: 'assets/images/icon_love.png',
-              isActive: false,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/wishlist', (route) => false);
+              },
+              child: BottomNavbarItem(
+                imageUrl: 'assets/images/icon_love.png',
+                isActive: false,
+              ),
             ),
           ],
         ),
