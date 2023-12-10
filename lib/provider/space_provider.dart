@@ -13,7 +13,10 @@ class SpaceProvider extends ChangeNotifier {
 
     if (result.statusCode == 200) {
       List data = jsonDecode(result.body);
-      List<Space> spaces = data.map((item) => Space.fromJson(item)).toList();
+      // List<Space> spaces = data.map((item) => Space.fromJson(item)).toList();
+      List<Space> spaces =
+          (data as List).map((item) => Space.fromJson(item)).toList();
+
       return spaces;
     } else {
       return <Space>[];

@@ -7,7 +7,7 @@ class Space {
   late double price;
   late int rating;
   late String address;
-  late String image;
+  late List image;
   late String phone;
   late String mapUrl;
   late int kamarTersedia;

@@ -216,25 +216,26 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                       Container(
                         height: 88,
-                        child: ListView.builder(
+                        child: ListView(
                           scrollDirection: Axis.horizontal,
-                          itemCount: 1, // Hanya satu item (satu gambar)
-                          itemBuilder: (context, index) {
+                          children: widget.space.image.map((item) {
                             return Container(
-                              margin: EdgeInsets.only(left: 24),
+                              margin: EdgeInsets.only(
+                                left: 24,
+                              ),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(16),
                                 child: Image.network(
-                                  widget.space.image,
+                                  item,
                                   width: 110,
                                   height: 88,
                                   fit: BoxFit.cover,
                                 ),
                               ),
                             );
-                          },
+                          }).toList(),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
