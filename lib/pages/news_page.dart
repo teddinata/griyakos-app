@@ -63,6 +63,7 @@ class NewsPage extends StatelessWidget {
                   },
                 ),
               ),
+              SizedBox(height: 50),
             ],
           ),
         ),
@@ -123,6 +124,7 @@ class NewsPage extends StatelessWidget {
           ],
         ),
       ),
+      // sizedBox untuk mengatur jarak antara floating button dengan bottom navbar
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
